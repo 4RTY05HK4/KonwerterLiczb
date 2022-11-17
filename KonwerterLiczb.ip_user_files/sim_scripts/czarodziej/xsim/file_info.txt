@@ -1,0 +1,3 @@
+czarodziej_clk_wiz.v,verilog,xil_defaultlib,../../../../KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+czarodziej.v,verilog,xil_defaultlib,../../../../KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

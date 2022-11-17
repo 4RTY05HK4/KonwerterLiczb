@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_clk_wiz.v" \
+"../../../../KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

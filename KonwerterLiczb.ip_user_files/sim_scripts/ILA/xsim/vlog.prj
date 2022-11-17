@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../../KonwerterLiczb.gen/sources_1/ip/ILA/hdl/verilog" \
+"../../../../KonwerterLiczb.gen/sources_1/ip/ILA/sim/ILA.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
