@@ -56,7 +56,8 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk10mhz__10.00000______0.000______50.0______290.478____133.882
+// clk10mhz__10.00000______0.000______50.0______559.472____346.848
+// clk_out2___5.00000______0.000______50.0______631.442____346.848
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -70,6 +71,7 @@ module czarodziej_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        clk10mhz,
+  output        clk_out2,
   // Status and control signals
   input         reset,
   output        locked,
@@ -109,7 +111,6 @@ wire clk_in2_czarodziej;
   wire        clkfbout_buf_czarodziej;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
-   wire clkout1_unused;
    wire clkout1b_unused;
    wire clkout2_unused;
    wire clkout2b_unused;
@@ -127,14 +128,18 @@ wire clk_in2_czarodziej;
     .CLKOUT4_CASCADE      ("FALSE"),
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
-    .DIVCLK_DIVIDE        (2),
-    .CLKFBOUT_MULT_F      (15.625),
+    .DIVCLK_DIVIDE        (5),
+    .CLKFBOUT_MULT_F      (32.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (78.125),
+    .CLKOUT0_DIVIDE_F     (64.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
+    .CLKOUT1_DIVIDE       (128),
+    .CLKOUT1_PHASE        (0.000),
+    .CLKOUT1_DUTY_CYCLE   (0.500),
+    .CLKOUT1_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (10.000))
   mmcm_adv_inst
     // Output clocks
@@ -143,7 +148,7 @@ wire clk_in2_czarodziej;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (clk10mhz_czarodziej),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (clkout1_unused),
+    .CLKOUT1             (clk_out2_czarodziej),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT2B            (clkout2b_unused),
@@ -198,6 +203,10 @@ wire clk_in2_czarodziej;
    (.O   (clk10mhz),
     .I   (clk10mhz_czarodziej));
 
+
+  BUFG clkout2_buf
+   (.O   (clk_out2),
+    .I   (clk_out2_czarodziej));
 
 
 

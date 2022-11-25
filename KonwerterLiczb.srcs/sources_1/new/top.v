@@ -25,10 +25,13 @@ module top(
     output [3:0] wy,
     input [3:0] we,
     //output [3:0] rej
-    output [15:0] LED
+    output [15:0] LED,
+    output [6:0] seg,
+    output [3:0] an
     );
 
 wire clk10mhz;
+wire clk_dz;
 
 czarodziej merlin(
     .clk10mhz(clk10mhz),
@@ -49,6 +52,20 @@ pamiec pamieta(
     .we(we),
     .rej(rej),
     .mem(LED)
+    );
+    
+seg_wysw seg7(
+    .clk(clk_dz),
+    .dane(LED),
+    .anoda(an),
+    .wyj_seg(seg)
+
+    );
+    
+clk_div dzielnik(
+    .clk(clk10mhz),
+    .clk_dz(clk_dz)
+
     );
 
 ILA ela(
