@@ -24,10 +24,10 @@ module pamiec(
     input clk,
     input [3:0] we,
     input [3:0] rej,
-    output [15:0] mem
+    output [7:0] mem
     );
 
-reg [15:0] memT;
+reg [7:0] memT;
 reg [0:0] flag;
 reg [13:0] counter; 
 always @(posedge clk)

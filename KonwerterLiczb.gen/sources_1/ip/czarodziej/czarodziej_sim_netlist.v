@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Sat Nov 19 18:24:13 2022
-// Host        : DESKTOP-GSBRLE7 running 64-bit major release  (build 9200)
+// Date        : Fri Nov 25 17:54:29 2022
+// Host        : DESKTOP-1NOTC2F running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.v
+//               c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.v
 // Design      : czarodziej
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,39 +16,27 @@
 module czarodziej
    (clk10mhz,
     clk_out2,
-    reset,
-    locked,
     clk_in1);
   output clk10mhz;
   output clk_out2;
-  input reset;
-  output locked;
   input clk_in1;
 
   wire clk10mhz;
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out2;
-  wire locked;
-  wire reset;
 
   czarodziej_clk_wiz inst
        (.clk10mhz(clk10mhz),
         .clk_in1(clk_in1),
-        .clk_out2(clk_out2),
-        .locked(locked),
-        .reset(reset));
+        .clk_out2(clk_out2));
 endmodule
 
 module czarodziej_clk_wiz
    (clk10mhz,
     clk_out2,
-    reset,
-    locked,
     clk_in1);
   output clk10mhz;
   output clk_out2;
-  input reset;
-  output locked;
   input clk_in1;
 
   wire clk10mhz;
@@ -59,8 +47,6 @@ module czarodziej_clk_wiz
   wire clk_out2_czarodziej;
   wire clkfbout_buf_czarodziej;
   wire clkfbout_czarodziej;
-  wire locked;
-  wire reset;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -74,6 +60,7 @@ module czarodziej_clk_wiz
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED;
   wire NLW_mmcm_adv_inst_DRDY_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_LOCKED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_PSDONE_UNCONNECTED;
   wire [15:0]NLW_mmcm_adv_inst_DO_UNCONNECTED;
 
@@ -176,13 +163,13 @@ module czarodziej_clk_wiz
         .DO(NLW_mmcm_adv_inst_DO_UNCONNECTED[15:0]),
         .DRDY(NLW_mmcm_adv_inst_DRDY_UNCONNECTED),
         .DWE(1'b0),
-        .LOCKED(locked),
+        .LOCKED(NLW_mmcm_adv_inst_LOCKED_UNCONNECTED),
         .PSCLK(1'b0),
         .PSDONE(NLW_mmcm_adv_inst_PSDONE_UNCONNECTED),
         .PSEN(1'b0),
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
-        .RST(reset));
+        .RST(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

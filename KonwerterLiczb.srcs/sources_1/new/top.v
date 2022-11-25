@@ -25,9 +25,10 @@ module top(
     output [3:0] wy,
     input [3:0] we,
     //output [3:0] rej
-    output [15:0] LED,
+    output [7:0] mem,
     output [6:0] seg,
-    output [3:0] an
+    output [3:0] an,
+    input [1:0] sw
     );
 
 wire clk10mhz;
@@ -51,12 +52,22 @@ pamiec pamieta(
     .clk(clk10mhz),
     .we(we),
     .rej(rej),
-    .mem(LED)
+    .mem(mem)
     );
+
+wire [3:0] kod_switchy;
+switch_decoder swiczer(
+    .clk(clk),
+    .switche(sw),
+    .kod(kod_switchy)
+);
+
+wire [15:0] segmem;
+assign segmem[7:0] = mem;
     
 seg_wysw seg7(
     .clk(clk_dz),
-    .dane(LED),
+    .dane(mem),
     .anoda(an),
     .wyj_seg(seg)
 
@@ -74,7 +85,8 @@ ILA ela(
     .probe1(wy),
     .probe2(we),
     .probe3(rej),
-    .probe4(LED)
+    .probe4(mem),
+    .probe5(kod_switchy)
 );
 
 endmodule

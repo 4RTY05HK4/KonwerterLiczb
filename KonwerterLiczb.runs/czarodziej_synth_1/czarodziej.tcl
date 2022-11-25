@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.tcl"
+  variable script "C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "czarodziej_synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -80,19 +82,19 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.cache/wt [current_project]
-set_property parent.project_path X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.cache/wt [current_project]
+set_property parent.project_path C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/ip/czarodziej/czarodziej.xci
-set_property used_in_implementation false [get_files -all x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_board.xdc]
-set_property used_in_implementation false [get_files -all x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc]
-set_property used_in_implementation false [get_files -all x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_ooc.xdc]
+read_ip -quiet C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/ip/czarodziej/czarodziej.xci
+set_property used_in_implementation false [get_files -all c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,7 +110,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1 -new_name czarodziej -ip [get_ips czarodziej]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1 -new_name czarodziej -ip [get_ips czarodziej]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -163,32 +165,32 @@ create_report "czarodziej_synth_1_synth_report_utilization_0" "report_utilizatio
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.dcp
+  file copy -force C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.v
+  write_verilog -force -mode synth_stub c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -198,47 +200,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.dcp
+  file copy -force C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_stub.v x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.v
+  file rename -force C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_stub.v c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_stub.vhdl x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.vhdl
+  file rename -force C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_stub.vhdl c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_sim_netlist.v x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.v
+  file rename -force C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_sim_netlist.v c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_sim_netlist.vhdl x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.vhdl
+  file rename -force C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej_sim_netlist.vhdl c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cacheID 
 
-if {[file isdir X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej]} {
+if {[file isdir C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej]} {
   catch { 
-    file copy -force x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.v X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej
+    file copy -force c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.v C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej
   }
 }
 
-if {[file isdir X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej]} {
+if {[file isdir C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej]} {
   catch { 
-    file copy -force x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.vhdl X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej
+    file copy -force c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_stub.vhdl C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.ip_user_files/ip/czarodziej
   }
 }
 file delete __synthesis_is_running__

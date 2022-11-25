@@ -10,6 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source czarodziej.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 393.895 ; gain = 60.844
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: czarodziej
 Command: synth_design -top czarodziej -part xc7a35ticpg236-1L -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -18,13 +19,13 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13076
+INFO: [Synth 8-7075] Helper process launched with PID 9092
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1213.141 ; gain = 407.406
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1213.312 ; gain = 406.961
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'czarodziej' [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.v:69]
-INFO: [Synth 8-6157] synthesizing module 'czarodziej_clk_wiz' [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'czarodziej' [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.v:69]
+INFO: [Synth 8-6157] synthesizing module 'czarodziej_clk_wiz' [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_clk_wiz.v:69]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71326]
 INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71326]
 INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
@@ -48,66 +49,66 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2022.2/s
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
-INFO: [Synth 8-6155] done synthesizing module 'czarodziej_clk_wiz' (0#1) [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_clk_wiz.v:69]
-INFO: [Synth 8-6155] done synthesizing module 'czarodziej' (0#1) [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'czarodziej_clk_wiz' (0#1) [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'czarodziej' (0#1) [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.v:69]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1306.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.551 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_ooc.xdc] for cell 'inst'
-Parsing XDC File [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_board.xdc] for cell 'inst'
-Finished Parsing XDC File [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_board.xdc] for cell 'inst'
-Parsing XDC File [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc] for cell 'inst'
-Finished Parsing XDC File [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [x:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/czarodziej_propImpl.xdc].
+Parsing XDC File [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej_board.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/czarodziej/czarodziej.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/czarodziej_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/czarodziej_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1306.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1307.551 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1306.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1307.551 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticpg236-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -130,25 +131,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1307.551 ; gain = 501.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -166,37 +167,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -217,28 +218,30 @@ Report Cell Usage:
 |3     |IBUF       |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1309.664 ; gain = 503.312
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1306.742 ; gain = 501.008
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.742 ; gain = 501.008
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:57 . Memory (MB): peak = 1309.664 ; gain = 503.312
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1309.664 ; gain = 503.312
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1306.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1309.664 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1319.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.613 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: fc4dd7d5
+Synth Design complete, checksum: 2513b7e
 INFO: [Common 17-83] Releasing license: Synthesis
 32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1319.930 ; gain = 892.449
-INFO: [Common 17-1381] The checkpoint 'X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP czarodziej, cache-ID = f50dd0fbad6e8d96
-INFO: [Common 17-1381] The checkpoint 'X:/Studia/sem_m_2/KwPUS/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:11 . Memory (MB): peak = 1327.613 ; gain = 899.613
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP czarodziej, cache-ID = 51a3d50363895d26
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/czarodziej_synth_1/czarodziej.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file czarodziej_utilization_synth.rpt -pb czarodziej_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 19 18:24:13 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 17:54:29 2022...

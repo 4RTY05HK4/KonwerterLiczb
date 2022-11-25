@@ -59,13 +59,15 @@ begin
             1 : rejMS = 2'b00;        
             2 : rejMS = 2'b01; 
             4 : rejMS = 2'b10; 
-            8 : rejMS = 2'b11; 
+            8 : rejMS = 2'b11;
+            default: rejMS = 2'b00; 
         endcase
         case(we)
             1 : rejLS = 2'b00;        
             2 : rejLS = 2'b01; 
             4 : rejLS = 2'b10; 
-            8 : rejLS = 2'b11; 
+            8 : rejLS = 2'b11;
+            default: rejMS = 2'b00;  
         endcase
     end
 end
