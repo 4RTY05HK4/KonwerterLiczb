@@ -1,0 +1,2 @@
+adder.vhd,vhdl,xil_defaultlib,../../../../KonwerterLiczb.gen/sources_1/ip/adder/sim/adder.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

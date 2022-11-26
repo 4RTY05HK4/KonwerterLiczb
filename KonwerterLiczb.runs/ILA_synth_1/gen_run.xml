@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="ILA_synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1669395079">
   <File Type="PA-TCL" Name="ILA.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="ILA_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ILA_reports.tcl"/>
   <File Type="RDS-RDS" Name="ILA.vds"/>
   <File Type="RDS-UTIL" Name="ILA_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ILA_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="ILA.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="ILA_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="ILA_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ILA">
     <File Path="$PSRCDIR/sources_1/ip/ILA/ILA.xci">
       <FileInfo>

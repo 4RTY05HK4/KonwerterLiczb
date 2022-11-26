@@ -115,6 +115,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -123,7 +125,9 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
+  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
+  set_param synth.incrementalSynthesisCache C:/Users/Jakub/Desktop/KonwerterLiczb/.Xil/Vivado-18328-DESKTOP-1NOTC2F/incrSyn
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35ticpg236-1L
@@ -141,6 +145,7 @@ OPTRACE "add files" START { }
   add_files -quiet C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.runs/synth_1/top.dcp
   read_ip -quiet C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/ip/czarodziej/czarodziej.xci
   read_ip -quiet C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/ip/ILA/ILA.xci
+  read_ip -quiet c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/ip/adder/adder.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/Jakub/Desktop/KonwerterLiczb/piny.xdc
 OPTRACE "read constraints: implementation" END { }

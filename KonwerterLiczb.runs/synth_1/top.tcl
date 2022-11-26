@@ -71,8 +71,12 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
+set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache C:/Users/Jakub/Desktop/KonwerterLiczb/.Xil/Vivado-18328-DESKTOP-1NOTC2F/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35ticpg236-1L
 
@@ -91,7 +95,9 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/clk_div.v
+  C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/driver.v
   C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/klawiatura.v
+  C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/konwerter.v
   C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/pamiec.v
   C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/seg_wysw.v
   C:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/new/switch_decoder.v
@@ -107,6 +113,8 @@ set_property used_in_synthesis false [get_files -all c:/Users/Jakub/Desktop/Konw
 set_property used_in_implementation false [get_files -all c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/ILA/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/ILA/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.gen/sources_1/ip/ILA/ILA_ooc.xdc]
+
+read_ip -quiet c:/Users/Jakub/Desktop/KonwerterLiczb/KonwerterLiczb.srcs/sources_1/ip/adder/adder.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

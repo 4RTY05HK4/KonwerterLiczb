@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="czarodziej_synth_1" LaunchPart="xc7a35ticpg236-1L" LaunchTime="1669395175">
   <File Type="PA-TCL" Name="czarodziej.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="czarodziej_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="czarodziej_reports.tcl"/>
   <File Type="RDS-RDS" Name="czarodziej.vds"/>
   <File Type="RDS-UTIL" Name="czarodziej_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="czarodziej_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="czarodziej.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="czarodziej_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="czarodziej_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/czarodziej">
     <File Path="$PSRCDIR/sources_1/ip/czarodziej/czarodziej.xci">
       <FileInfo>

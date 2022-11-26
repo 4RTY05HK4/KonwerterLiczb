@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../KonwerterLiczb.gen/sources_1/ip/adder/sim/adder.vhd" \
+
+nosort
